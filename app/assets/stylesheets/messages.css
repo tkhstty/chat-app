@@ -1,0 +1,51 @@
+/* 共通部分 */
+
+.Wrapper {
+  display: flex;
+}
+
+
+/* side_bar */
+
+.Sidebar {
+  background-color: #253141;
+  height: 100vh;
+  width: 300px;
+}
+
+.SidebarHead {
+  height: 100px;
+  padding: 0 20px;
+}
+
+.SidebarRooms {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+
+/* main_chat */
+
+.Chatroom {
+  background-color: #fff;
+  height: 100vh;
+  width: calc(100vw - 300px);
+}
+
+.ChatroomHead {
+  height: 100px;
+  padding: 0 40px;
+}
+
+.ChatroomRoom {
+  background-color: #fafafa;
+  height: calc(100vh - 190px);
+  padding: 46px 40px 0;
+}
+
+.ChatroomForm {
+  background-color: #ddd;
+  height: 90px;
+  padding: 20px 40px;
+}

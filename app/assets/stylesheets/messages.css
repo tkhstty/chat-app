@@ -60,18 +60,103 @@
 }
 
 .ChatroomHead {
+  display: flex;
   height: 100px;
+  justify-content: space-between;
   padding: 0 40px;
+}
+
+.ChatroomHeadName {
+  color: #333;
+  font-size: 24px;
+  margin-top: 36px;
+  text-decoration: none;
+}
+
+.ChatroomHeadExit {
+  margin-top: 40px;
+}
+
+.ChatroomHeadExit a {
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+  text-decoration: none;
 }
 
 .ChatroomRoom {
   background-color: #fafafa;
   height: calc(100vh - 190px);
   padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.ChatroomRoomMessage {
+  margin-bottom: 40px;
+}
+
+.ChatroomRoomMessageHead {
+  display: flex;
+  margin-top: 10px;
+}
+
+.ChatroomRoomMessageHeadName {
+  color: #434a54;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.ChatroomRoomMessageHeadDate {
+  color: #999;
+  font-size: 12px;
+}
+
+.ChatroomRoomMessageText {
+  color: #434a54;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .ChatroomForm {
   background-color: #ddd;
+  display: flex;
   height: 90px;
   padding: 20px 40px;
+}
+
+.ChatroomFormInput {
+  background-color: white;
+  display: flex;
+  margin-right: 15px;
+  width: 100%;
+}
+
+.ChatroomFormInputMessage {
+  border: none;
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.ChatroomFormInputImage {
+  background-color: lightblue;
+  color: white;
+  font-size: 12px;
+  margin: 5px 10px;
+  padding: 12px;
+  text-align: center;
+  width: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+.ChatroomFormInputSubmit {
+  background-color: #38aef0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 20px;
 }

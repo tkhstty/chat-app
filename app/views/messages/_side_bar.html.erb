@@ -5,7 +5,7 @@
 <div class="SidebarRooms">
   <% current_user.rooms.each do |room| %>
     <div class="SidebarRoomsWrapper">
-      <div class="SidebarRoomsName"><a href=""><%= room.name %></a></div>
+      <div class="SidebarRoomsName"><%= link_to room.name, room_messages_path(room.id) %></a></div>
     </div>
   <% end %>
 </div>

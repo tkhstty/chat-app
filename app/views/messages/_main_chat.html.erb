@@ -46,13 +46,13 @@
     <div class="ChatroomRoomMessageText">Good Afternoon</div>
   </div>
 </div>
-<div class="ChatroomForm">
+<%= form_with model: [@room, @message], class: 'ChatroomForm', local: true do |f| %>
   <div class="ChatroomFormInput">
-    <input class="ChatroomFormInputMessage" placeholder="type a message">
+    <%= f.text_field :content, class: 'ChatroomFormInputMessage', placeholder: 'type a message' %>
     <label class="ChatroomFormInputImage">
       <span class="ChatroomFormInputImageFile">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="ChatroomFormInputSubmit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'ChatroomFormInputSubmit' %>
+<% end %>

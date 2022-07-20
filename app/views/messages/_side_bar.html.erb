@@ -1,39 +1,11 @@
 <div class="SidebarHead">
-  <div class="SidebarHeadName"><%=link_to current_user.name, edit_user_path(current_user) %></div>
-  <div class="SidebarHeadNewroom"><a href="">チャットを作成する</a></div>
+  <div class="SidebarHeadName"><%= link_to current_user.name, edit_user_path(current_user) %></div>
+  <div class="SidebarHeadNewroom"><%= link_to 'チャットを作成する', new_room_path %></div>
 </div>
 <div class="SidebarRooms">
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom1</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom2</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom3</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom4</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom5</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom6</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom7</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom8</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom9</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom10</a></div>
-  </div>
-  <div class="SidebarRoomsWrapper">
-    <div class="SidebarRoomsName"><a href="">Hogeroom11</a></div>
-  </div>
+  <% current_user.rooms.each do |room| %>
+    <div class="SidebarRoomsWrapper">
+      <div class="SidebarRoomsName"><a href=""><%= room.name %></a></div>
+    </div>
+  <% end %>
 </div>

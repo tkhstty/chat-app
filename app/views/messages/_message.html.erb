@@ -4,4 +4,5 @@
     <div class="ChatroomRoomMessageHeadDate"><%= l message.created_at %></div>
   </div>
   <div class="ChatroomRoomMessageText"><%= message.content %></div>
+    <%= image_tag message.image.variant(resize: '500x500'), class: 'ChatroomRoomMessageImage' if message.image.attached? %>
 </div>
